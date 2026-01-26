@@ -1,0 +1,134 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: "Sarabun", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+/* แทร็กเลื่อน */
+.hero-bg {
+    display: flex;
+    width: 300%;              /* 3 รูป */
+    height: 100%;
+    animation: heroSlide 30s linear infinite;
+}
+
+/* รูปแต่ละรูป */
+.hero-bg img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+/* เลื่อนจริง */
+@keyframes heroSlide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-1vw);
+    }
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.intro {
+    margin-bottom: 50px;
+}
+
+/* ===== FLIPBOOK ===== */
+.flipbook-section {
+    margin-bottom: 60px;
+}
+
+.flipbook iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== NAVIGATION ===== */
+.chapter-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.btn {
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #ddd;
+    color: #333;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #bbb;
+}
+
+.btn.primary {
+    background: #4a7cff;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: #2f5fe0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #f2f2f2;
+    color: #666;
+}

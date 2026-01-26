@@ -1,0 +1,150 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #222;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    max-width: 1000px;   /* เท่ากับ chapter1 */
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+/* ===== FLIPBOOK ===== */
+.flipbook-section h2 {
+    margin-bottom: 16px;
+}
+
+.flipbook {
+    width: 100%;
+    height: 600px;       /* ขนาดเดียวกับ chapter1 */
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.flipbook iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== TEST BUTTONS ===== */
+.test-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 40px 0;
+}
+
+/* ===== NAV BUTTONS ===== */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* ===== BUTTON STYLE ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #e0e0e0;
+    color: #222;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: #d0d0d0;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: #1e4fd8;
+}
+
+.btn.secondary {
+    background: #eef2ff;
+    color: #1e40af;
+}
+
+.btn.secondary:hover {
+    background: #e0e7ff;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .test-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

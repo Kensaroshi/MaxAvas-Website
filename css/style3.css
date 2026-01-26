@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* ===== Banner ===== */
+.banner {
+    width: 100vw;
+    height: 257px;
+    background-image: url("image/education.png"); /* ขนาด 985x257 ใช้ได้ */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.banner-text {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-text h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.banner-text p {
+    margin-top: 8px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== Layout ===== */
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+/* ===== Cards ===== */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.person-card {
+    width: 230px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.person-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Hover Effect */
+.person-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.info {
+    padding: 16px;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #666;
+}
+/* ===== NAV ===== */
+.about-nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about-nav .btn {
+    display: inline-block;
+    background: #007aff;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-nav .btn:hover {
+    background: #005fcc;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+
+/* ===== FOOTER ===== */
+.about-footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
