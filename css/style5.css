@@ -1,0 +1,150 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+}
+
+.hero-text p {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* ================= FORM SECTION ================= */
+
+.form-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.form-card h2 {
+    font-size: 28px;
+}
+
+.form-card p {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* ================= FORM WRAPPER ================= */
+
+.form-wrapper {
+    margin-top: 40px;
+    width: 100%;
+    height: 700px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px #eee;
+}
+
+.form-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ================= NAV ================= */
+
+.bottom-nav {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.btn {
+    padding: 14px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.secondary {
+    background: #555;
+}
+
+.secondary:hover {
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+    .form-wrapper {
+        height: 600px;
+    }
+}
